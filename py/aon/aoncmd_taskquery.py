@@ -242,7 +242,7 @@ def process(args):
         order=order,
         text=args.text)
 
-    results = [dict(r.__dict__) for r in results]
+    results = [r._asdict() for r in results]
 
     for r in results:
         if r['statusName'] is None:
